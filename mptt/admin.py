@@ -201,7 +201,7 @@ if getattr(settings, 'MPTT_USE_FEINCMS', True):
             def _actions_column(self, obj):
                 actions = super(FeinCMSModelAdmin, self)._actions_column(obj)
                 actions.insert(0,
-                    u'<a href="add/?%s=%s" title="%s"><img src="%simg/admin/icon_addlink.gif" alt="%s" /></a>' % (
+                    u'<a href="add/?%s=%s" title="%s"><img src="%simg/icon_addlink.gif" alt="%s" /></a>' % (
                         self.model._mptt_meta.parent_attr,
                         obj.pk,
                         _('Add child'),
@@ -210,7 +210,7 @@ if getattr(settings, 'MPTT_USE_FEINCMS', True):
 
                 if hasattr(obj, 'get_absolute_url'):
                     actions.insert(0,
-                        u'<a href="%s" title="%s" target="_blank"><img src="%simg/admin/selector-search.gif" alt="%s" /></a>' % (
+                        u'<a href="%s" title="%s" target="_blank"><img src="%simg/selector-search.gif" alt="%s" /></a>' % (
                             obj.get_absolute_url(),
                             _('View on site'),
                             settings.ADMIN_MEDIA_PREFIX,
