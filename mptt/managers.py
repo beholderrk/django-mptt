@@ -66,7 +66,8 @@ class TreeManager(models.Manager):
         self._base_manager = None
         if self.tree_model is not model:
             # _base_manager is the treemanager on tree_model
-            self._base_manager = self.tree_model._tree_manager
+#            self._base_manager = self.tree_model._tree_manager
+            pass
 
     @property
     def parent_attr(self):
